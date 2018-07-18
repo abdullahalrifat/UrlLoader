@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent in = new Intent(getApplicationContext(), DisplayWebPage.class);
 
                 // getting page url
-                String page_url = ("www.google.com");
+                String page_url = ("http://www.google.com");
                 //Toast.makeText(myContext, page_url, Toast.LENGTH_SHORT).show();
                 in.putExtra("page_url", page_url);
                 startActivity(in);

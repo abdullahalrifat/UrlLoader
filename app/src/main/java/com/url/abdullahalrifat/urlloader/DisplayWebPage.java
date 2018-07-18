@@ -25,7 +25,7 @@ public class DisplayWebPage extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_display_web_page);
         this.webview = (WebView) findViewById(R.id.webpage);
-
+        String url= getIntent().getStringExtra("page_url");
         WebSettings settings = webview.getSettings();
         settings.setJavaScriptEnabled(true);
         webview.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
@@ -61,7 +61,7 @@ public class DisplayWebPage extends AppCompatActivity {
                 alertDialog.show();
             }
         });
-        webview.loadUrl("http://www.google.com");
+        webview.loadUrl(url);
     }
 
 
